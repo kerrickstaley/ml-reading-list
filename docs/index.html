@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kerrick's AI safety + ML reading list</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fg: #1a1a1a;
+    --muted: #666;
+    --link: #0b5cad;
+    --rule: #ddd;
+    --bg: #fdfdfd;
+    --star-on: #f5a623;
+    --star-off: #ddd;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    max-width: 760px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.5;
+  }
+  h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.35rem; margin-top: 2rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.25rem; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .description { color: var(--muted); margin-bottom: 1rem; }
+  .disclaimer { color: var(--muted); font-size: 0.92rem; margin: 0.5rem 0 1rem; }
+  nav.toc {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0 1.5rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    font-weight: 500;
+  }
+  ul.read-list, ul.toread-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul.read-list > li {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  ul.toread-list > li {
+    margin-bottom: 0.35rem;
+  }
+  .entry-title { font-weight: 500; }
+  .rating { font-family: "Noto Sans Symbols 2", sans-serif; color: var(--star-on); font-size: 1.1rem; letter-spacing: 1px; margin-left: 0.25rem; white-space: nowrap; }
+  .commentary { color: var(--muted); font-size: 0.95rem; margin: 0.2rem 0 0; min-height: 1.2em; }
+</style>
+</head>
+<body>
+
+<h1>Kerrick's AI safety + ML reading list</h1>
+
+<p class="description">This is a list of papers and blog posts that I've read and want to read related to AI safety and ML (and a few broader SWE-related entries). I'm publishing this in an effort to <a href="https://www.swyx.io/learn-in-public">learn in public</a>. Last updated 2026-05-17.</p>
+
+<p class="disclaimer"><em>The star ratings are entirely for me and are mostly based on how relevant the work is to my interests and how easily I was able to digest useful insights from the work. A low rating does not mean the work or results are "bad". The commentary is dictated off-the-cuff and all opinions are weakly held.</em></p>
+
+<nav class="toc">
+  <a href="#read">Read</a>
+  <a href="#to-read">To Read</a>
+</nav>
+
+<h2 id="read">Read</h2>
+<ul class="read-list">
+  <li>
+    <span class="entry-title"><a href="https://www.alignmentforum.org/posts/dZFpEdKyb9Bf4xYn7/tips-for-empirical-alignment-research">Tips for Empirical Alignment Research</a></span>
+    <span class="rating" title="4.5 / 5">★★★★⯪</span>
+    <p class="commentary">Tons of great advice in here. I've returned to it several times.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://cs.stanford.edu/~jsteinhardt/ResearchasaStochasticDecisionProcess.html">Research as a Stochastic Decision Process</a></span>
+    <span class="rating" title="4.5 / 5">★★★★⯪</span>
+    <p class="commentary">It's the primary framework with which I think about my research progress.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://arxiv.org/pdf/2601.02780">MiMo V2 Flash Technical Report</a></span>
+    <span class="rating" title="4 / 5">★★★★☆</span>
+    <p class="commentary">Lots of good ideas, good detail.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://thinkingmachines.ai/blog/lora/">LoRA Without Regret</a></span>
+    <span class="rating" title="4 / 5">★★★★☆</span>
+    <p class="commentary">Helps build a lot of good intuition about LoRA.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://www.alignmentforum.org/posts/eJGptPbbFPZGLpjsp/highly-opinionated-advice-on-how-to-write-ml-papers">Highly Opinionated Advice on How to Write ML Papers — AI Alignment Forum</a></span>
+    <span class="rating" title="4 / 5">★★★★☆</span>
+    <p class="commentary">Lots of good stuff in here.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://cdn.openai.com/pdf/d57827c6-10bc-47fe-91aa-0fde55bd3901/monitoring-monitorability.pdf">Monitoring Monitorability | OpenAI</a></span>
+    <span class="rating" title="4 / 5">★★★★☆</span>
+    <p class="commentary">This paper says a lot and really does a good job of establishing a framework for thinking about monitorability. The numerical results are sometimes noisy, which makes it hard to interpret them.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://arxiv.org/pdf/2512.02556">Deepseek V3.2 Technical Report</a></span>
+    <span class="rating" title="3.5 / 5">★★★⯪☆</span>
+    <p class="commentary">Reasonably solid. It feels like, for better or for worse, a lot of the ideas are hacks, so I didn't take away a lot of internalizable knowledge from this.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://epoch.ai/gradient-updates/state-of-rl-envs">An FAQ on Reinforcement Learning Environments | Epoch AI</a></span>
+    <span class="rating" title="3.5 / 5">★★★⯪☆</span>
+    <p class="commentary">Good for getting an understanding of how RL envs work in practice.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://arxiv.org/pdf/2302.01318">Speculative Sampling</a></span>
+    <span class="rating" title="3.5 / 5">★★★⯪☆</span>
+    <p class="commentary">A simple but good idea and the math is fun.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/">Defeating Nondeterminism in LLM Inference - Thinking Machines Lab</a></span>
+    <span class="rating" title="3.5 / 5">★★★⯪☆</span>
+    <p class="commentary">Lots of good detail, but the main point is that GPU kernels are often not batch-size invariant, and it takes a while to get there.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://metr.org/blog/2026-01-19-early-work-on-monitorability-evaluations/">Early work on monitorability evaluations - METR</a></span>
+    <span class="rating" title="3.5 / 5">★★★⯪☆</span>
+    <p class="commentary">Good ideas, although I didn't have a lot of take-aways.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://openai.com/index/chain-of-thought-monitoring/">Detecting misbehavior in frontier reasoning models | OpenAI</a></span>
+    <span class="rating" title="3.5 / 5">★★★⯪☆</span>
+    <p class="commentary">This is specifically for the blog post, not the paper. It's a nice result that clearly demonstrates that CoT pressure degrades monitorability without reducing bad behavior much.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://blog.redwoodresearch.org/p/why-its-hard-to-make-settings-for">Why it's hard to make settings for high-stakes control research</a></span>
+    <span class="rating" title="3.5 / 5">★★★⯪☆</span>
+    <p class="commentary">Makes some good points. Buck has a lot of perspective on this.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://alignment.anthropic.com/2026/teaching-claude-why/">Teaching Claude Why</a></span>
+    <span class="rating" title="3.5 / 5">★★★⯪☆</span>
+    <p class="commentary">A pretty cool set of results. Feels like there's more to be said here.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://arxiv.org/abs/2205.14135">Flash Attention</a></span>
+    <span class="rating" title="3 / 5">★★★☆☆</span>
+    <p class="commentary">It took me a while to digest the algorithm and why it's faster. Feels like this could work better as a blog post with some visualizations.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://arxiv.org/abs/2106.09685">LoRA</a></span>
+    <span class="rating" title="3 / 5">★★★☆☆</span>
+    <p class="commentary">LoRA is a very simple concept. You could just ask an LLM to explain it to you in like 30 seconds, but the paper is not bad.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://arxiv.org/pdf/2002.05202">GLU Variants Improve Transformer</a></span>
+    <span class="rating" title="2.5 / 5">★★⯪☆☆</span>
+    <p class="commentary">Famously, the authors of this paper don't know why the technique works, so it's not very insightful, but everyone uses this and the research is good.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://arxiv.org/pdf/2104.09864">RoPE paper</a></span>
+    <span class="rating" title="2.5 / 5">★★⯪☆☆</span>
+    <p class="commentary">Everyone uses this, but I felt that learning this from the paper wasn't super helpful. It's easier to just ask an LLM to explain it to you.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://arxiv.org/abs/2305.18290">Direct Preference Optimization: Your Language Model is Secretly a Reward Model</a></span>
+    <span class="rating" title="2 / 5">★★☆☆☆</span>
+    <p class="commentary">I didn't "get" it from reading the paper, but learned the idea a lot faster just by asking an LLM to explain it to me.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://github.com/MoonshotAI/Kimi-K2.5/blob/master/tech_report.pdf">Kimi 2.5 Technical Report</a></span>
+    <span class="rating" title="1.5 / 5">★⯪☆☆☆</span>
+    <p class="commentary">It felt very fluffy.</p>
+  </li>
+  <li>
+    <span class="entry-title"><a href="https://intelligence.org/files/CEV.pdf">Coherent Extrapolated Volition</a></span>
+    <span class="rating" title="1 / 5">★☆☆☆☆</span>
+    <p class="commentary">I abandoned this because the writing style made it hard to read. The <a href="https://www.lesswrong.com/w/coherent-extrapolated-volition">LessWrong summary</a> is a much better articulation of this idea.</p>
+  </li>
+</ul>
+
+<h2 id="to-read">To Read</h2>
+<ul class="toread-list">
+  <li><a href="https://arxiv.org/pdf/2402.10260">StrongReject</a></li>
+  <li><a href="https://openai.com/index/openai-anthropic-safety-evaluation/">Findings from a pilot Anthropic–OpenAI alignment evaluation exercise: OpenAI Safety Tests</a></li>
+  <li><a href="https://anyio.readthedocs.io/en/stable/why.html">Why you should be using AnyIO APIs instead of asyncio APIs</a></li>
+  <li><a href="https://www.youtube.com/watch?v=lVynu4bo1rY&amp;list=PLoROMvodv4rMqXOcazWaTUHhq-yembLCV&amp;index=3">Stanford CS336 Lecture 3: Architectures</a> (<a href="https://x.com/gosailglobal/status/2051494907974697144?s=46">Twitter summary</a>)</li>
+  <li><a href="https://arxiv.org/pdf/2406.11717">Refusal in Language Models Is Mediated by a Single Direction</a></li>
+  <li><a href="https://blog.redwoodresearch.org/p/risk-from-fitness-seeking-ais-mechanisms">Risk from fitness-seeking AIs: mechanisms and mitigations</a></li>
+  <li><a href="https://arxiv.org/pdf/2602.22755">AuditBench</a></li>
+  <li><a href="https://arxiv.org/abs/2202.03286">Red Teaming Language Models with Language Models</a></li>
+  <li><a href="https://ethanperez.net/easy-paper-writing-tips/">Easy Paper Writing Tips | Ethan Perez</a></li>
+  <li><a href="https://github.com/anthropics/prompt-eng-interactive-tutorial">Anthropic's Interactive Prompt Engineering Tutorial · GitHub</a></li>
+  <li><a href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api">Best practices for prompt engineering with the OpenAI API</a></li>
+  <li><a href="https://arxiv.org/pdf/2309.00071">YaRN</a></li>
+  <li><a href="https://aiagentindex.mit.edu/">AI Agent Index</a></li>
+  <li><a href="https://arxiv.org/pdf/2601.11699">Frontier AI Auditing: Toward Rigorous Third-Party Assessment of Safety and Security Practices at Leading AI Companies</a></li>
+  <li><a href="https://arxiv.org/pdf/2502.15657">Superintelligent Agents Pose Catastrophic Risks: Can Scientist AI Offer a Safer Path?</a></li>
+  <li><a href="https://www.nist.gov/blogs/caisi-research-blog/accelerating-ai-innovation-through-measurement-science">Accelerating AI Innovation Through Measurement Science | NIST</a></li>
+  <li><a href="https://www.aisi.gov.uk/blog/international-ai-network-consensus-and-open-questions">International consensus and open questions in AI evaluations | AISI Work</a></li>
+  <li><a href="https://arxiv.org/pdf/2407.14981">Open Problems in Technical AI Governance</a></li>
+  <li><a href="https://arxiv.org/pdf/2601.10160">Alignment Pretraining: AI Discourse Causes Self-Fulfilling (Mis)alignment</a></li>
+  <li><a href="https://80000hours.org/problem-profiles/extreme-power-concentration/">Extreme power concentration | 80,000 Hours</a></li>
+  <li><a href="https://arxiv.org/pdf/2503.10965">Auditing language models for hidden objectives</a></li>
+  <li><a href="https://arxiv.org/abs/2312.06942">AI Control: Improving Safety Despite Intentional Subversion</a></li>
+  <li><a href="https://arxiv.org/abs/2502.17424">Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs</a></li>
+  <li><a href="https://openai.com/index/harness-engineering/">Harness Engineering</a></li>
+  <li><a href="https://arxiv.org/abs/2512.13526">Async Control: Stress-testing Asynchronous Control Measures for LLM Agents</a></li>
+  <li><a href="https://arxiv.org/abs/2504.19874">TurboQuant</a></li>
+  <li><a href="https://zhijing-jin.com/d/2026-ai-risk.pdf">AI Poses Risks to Democratic and Social Systems</a></li>
+  <li><a href="https://cursor.com/resources/Composer2.pdf">Composer2 Technical Report</a></li>
+  <li><a href="https://arxiv.org/pdf/2601.10387">The Assistant Axis: Situating and Stabilizing the Default Persona of Language Models</a></li>
+  <li><a href="https://simonwillison.net/guides/agentic-engineering-patterns/">Agentic Engineering Patterns - Simon Willison's Weblog</a></li>
+  <li><a href="https://arxiv.org/abs/2603.15031">AttnRes</a></li>
+  <li><a href="https://arxiv.org/abs/2404.19737">MTP</a></li>
+  <li><a href="https://rlhfbook.com/">RLHF book</a></li>
+  <li><a href="https://lucumr.pocoo.org/2026/1/31/pi/">Pi: The Minimal Agent Within OpenClaw | Armin Ronacher's Thoughts and Writings</a></li>
+  <li><a href="https://arxiv.org/abs/2010.11929">Vision Transformer (ViT)</a></li>
+  <li><a href="https://arxiv.org/pdf/2309.06180">PagedAttention</a></li>
+  <li><a href="https://arxiv.org/abs/1701.06538">MoE paper</a></li>
+  <li><a href="https://arxiv.org/abs/2203.15556">Chinchilla paper</a></li>
+</ul>
+
+</body>
+</html>
